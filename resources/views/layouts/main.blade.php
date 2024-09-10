@@ -14,8 +14,6 @@
 
     @include('partials.header')
 
-    @yield('hero')
-
     @yield('content')
 
     @include('partials.footer')
