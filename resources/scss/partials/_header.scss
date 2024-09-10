@@ -4,9 +4,16 @@
 .container{
     @include flex;
 
-    ul{
-        width: 60%;
+    .header-menu{
         @include flex;
+        width: 60%;
+
+        a{
+            padding: 3.1em 0;
+        }
+    }
+
+    ul{
         gap: 2em;
 
         li{
@@ -19,7 +26,6 @@
                 color: $nav-a-color;
                 font-weight: $bold;
                 height: 100%;
-                padding: 3.1em 0;
             }
 
             .active{

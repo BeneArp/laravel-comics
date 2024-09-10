@@ -1,3 +1,11 @@
+@php
+    $comicsMenu = config('menues.nav');
+    $shopMenu = config('menues.footerNav.shopLinks');
+    $dcMenu = config('menues.footerNav.dcLinks');
+    $siteMenu = config('menues.footerNav.siteLinks')
+    // dump($dcMenu)
+
+@endphp
 
 <footer>
     <div id="nav-container">
@@ -9,16 +17,24 @@
 
                     <h3>DC COMICS</h3>
                     <ul>
-                        <li v-for="link in comicsLinks">
-                            <a href="#">link</a>
-                        </li>
+
+                        @foreach ( $comicsMenu as $item )
+                            <li>
+                                <a href="#">{{$item['name']}}</a>
+                            </li>
+                        @endforeach
+
                     </ul>
 
                     <h3>SHOP</h3>
                     <ul>
-                        <li v-for="link in comicsLinks">
-                            <a href="#">link</a>
-                        </li>
+
+                        @foreach ( $shopMenu as $item )
+                            <li>
+                                <a href="#">{{$item['text']}}</a>
+                            </li>
+                        @endforeach
+
                     </ul>
 
                 </div>
@@ -27,17 +43,27 @@
 
                     <h3>DC</h3>
                     <ul>
-                        <li v-for="link in comicsLinks">
-                            <a href="#">link</a>
-                        </li>
+
+                        @foreach ( $dcMenu as $item )
+                            <li>
+                                <a href="#">{{$item['text']}}</a>
+                            </li>
+                        @endforeach
+
+                    </ul>
+
                     </div>
 
                     <div>
                         <h3>SITES</h3>
                         <ul>
-                            <li v-for="link in comicsLinks">
-                                <a href="#">link</a>
-                            </li>
+
+                            @foreach ( $siteMenu as $item )
+                                <li>
+                                    <a href="#">{{$item['text']}}</a>
+                                </li>
+                            @endforeach
+
                         </ul>
                     </div>
 

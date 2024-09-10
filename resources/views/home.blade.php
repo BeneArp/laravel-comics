@@ -1,6 +1,9 @@
 {{-- questa view estende il file main.blade.php che è dentro la cartella view/layouts --}}
 @extends('layouts.main')
 
+@php
+    $menu = config('menues.homeNav');
+@endphp
 
 @section('content')
 
@@ -38,41 +41,16 @@
 
         <div class="container">
 
-            <div>
-                <a href="#">
-                    <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
-                    <span>DIGITAL COMICS</span>
-                </a>
-            </div>
+            @foreach ($menu as $item)
 
+                <div>
+                    <a href="#">
+                        <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
+                        <span>{{$item['text']}}</span>
+                    </a>
+                </div>
 
-            <div>
-                <a href="#">
-                    <img src="getImagePath(`../assets/${shop.image}`)" alt="">
-                    <span>DC MERCH</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="getImagePath(`../assets/${shop.image}`)" alt="">
-                    <span>SUBSCRIPTION</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="getImagePath(`../assets/${shop.image}`)" alt="">
-                    <span>COMICS SCHOP LOCATOR</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="getImagePath(`../assets/${shop.image}`)" alt="">
-                    <span>DC POWER VISA</span>
-                </a>
-            </div>
+            @endforeach
 
         </div>
 
