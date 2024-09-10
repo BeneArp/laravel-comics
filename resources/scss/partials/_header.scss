@@ -4,10 +4,6 @@
 .container{
     @include flex;
 
-    img{
-        padding: 0.5em;
-    }
-
     ul{
         width: 60%;
         @include flex;

@@ -12,6 +12,20 @@
 
         <div class="container">
 
+            @foreach ( $comics as $comic )
+
+                <div class="card">
+
+                    <div class="cover">
+                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                    </div>
+
+                    <span>{{ $comic['type'] }}</span>
+
+                </div>
+
+            @endforeach
+
         </div>
 
         <div class="label center">
@@ -26,7 +40,7 @@
 
             <div>
                 <a href="#">
-                    <img src="getImagePath(`../assets/${shop.image}`)" alt="">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="">
                     <span>DIGITAL COMICS</span>
                 </a>
             </div>

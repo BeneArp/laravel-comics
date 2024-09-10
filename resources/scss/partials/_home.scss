@@ -62,3 +62,32 @@
         cursor: pointer;
     }
 }
+
+
+.card{
+    margin: 2em 0;
+    width: 15%;
+    cursor: pointer;
+    position: relative;
+    // debug
+
+    .cover{
+        background-color: lightblue;
+        overflow: hidden;
+        height: 9vw;
+        width: 100%;
+
+        img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    span{
+        display: block;
+        color: white;
+        margin-top: 1em;
+        text-transform: uppercase;
+    }
+}
