@@ -1,0 +1,35 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.container{
+    @include flex;
+
+    img{
+        padding: 0.5em;
+    }
+
+    ul{
+        width: 60%;
+        @include flex;
+        gap: 2em;
+
+        li{
+            :hover{
+                color: $header-nav-hover;
+            }
+
+            a{
+                display: inline-block;
+                color: $nav-a-color;
+                font-weight: $bold;
+                height: 100%;
+                padding: 3.1em 0;
+            }
+
+            .active{
+                color: $header-nav-hover;
+                border-bottom: 3px solid $header-nav-hover;
+            }
+        }
+    }
+}
