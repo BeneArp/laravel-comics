@@ -7,7 +7,7 @@
                 ],
 
                 [
-                    'name' => 'comis',
+                    'name' => 'comics',
                     'text' => 'COMICS'
                 ],
 

@@ -9,9 +9,10 @@
 
         <ul class="header-menu">
 
+
             @foreach ($headerMenues as $item)
                 <li>
-                    <a href="#">{{$item['text']}}</a>
+                    <a href="{{route($item['name'])}}" class="{{Route::currentRouteName() === $item['name'] ? 'active' : '' }}">{{$item['text']}}</a>
                 </li>
             @endforeach
 
